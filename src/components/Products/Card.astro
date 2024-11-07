@@ -2,8 +2,10 @@
 import { PRODUCTOS } from "./Productos";
 ---
 
-<h1 class="text-3xl font-semibold text-purple-400 text-center m-4">Catalogo de Productos.</h1>
-<section>
+<h1 class="text-3xl font-semibold text-purple-400 text-center m-4">
+  Catalogo de Productos.
+</h1>
+<section class="grid grid-cols-2 sm:grid-cols-4">
   {
     PRODUCTOS.map(
       ({
@@ -18,21 +20,20 @@ import { PRODUCTOS } from "./Productos";
         precio,
         descuento,
       }) => (
-        <article class="bg-gray-100 m-2 grid grid-cols-4 sm:grid-cols-2">
-          <img
-            src={foto}
-            alt={descripcion}
-            class="w-full h-64 object-cover rounded-md"
-          />
-          <h2 class="text-xl font-semibold text-purple-400">{nombre}</h2>
-          <p class="text-lg font-semibold text-gray-600">{descripcion}</p>
-          <p class="text-lg font-semibold text-gray-600">{caracteristicas}</p>
-          <p class="text-lg font-semibold text-gray-600">{dimensiones}</p>
-          <p class="text-lg font-semibold text-gray-600">{material}</p>
-          <p class="text-lg font-semibold text-gray-600">{instrucciones}</p>
-          <p class="text-lg font-semibold text-gray-600">{precauciones}</p>
-          <p class="text-lg font-semibold text-gray-600">${precio}</p>
-          <p class="text-lg font-semibold text-gray-600">${descuento}</p>
+        <article class="bg-gray-100 m-2 border-fuchsia-950 border rounded-md p-4">
+          <section>
+            <img src={foto} alt={descripcion} class="object-cover rounded-md" />
+            <h2 class="text-xl font-semibold text-purple-400 p-2">{nombre}</h2>
+            <section class="font-semibold text-gray-600">
+              <p>{descripcion}</p>
+              <p>{caracteristicas}</p>
+              <p>{dimensiones}</p>
+              <p>{material}</p>
+              <p>{instrucciones}</p>
+              <p>{precauciones}</p>
+              <p class="text-2xl">${precio} -  Ahora: ${descuento}</p>
+            </section>
+          </section>
         </article>
       )
     )
