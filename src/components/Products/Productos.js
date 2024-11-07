@@ -1,6 +1,6 @@
 export const PRODUCTOS = [
     {
-        foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arteli.com.mx%2Fjuguete-para-bebes-fisher-price-perrito-3506713%2Fp&psig=AOvVaw1lEL4AeB0W4FBgLnITS3se&ust=1731050643451000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiV5KfYyYkDFQAAAAAdAAAAABAE",
+        foto: "/public/Images/exampleImages.webp",
         nombre: "Producto 1 - Nombre",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -12,7 +12,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arteli.com.mx%2Fjuguete-para-bebes-fisher-price-perrito-3506713%2Fp&psig=AOvVaw1lEL4AeB0W4FBgLnITS3se&ust=1731050643451000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiV5KfYyYkDFQAAAAAdAAAAABAE",
+        foto: "/public/Images/exampleImages.webp",
         nombre: "Producto 1  - Nombre",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -24,7 +24,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arteli.com.mx%2Fjuguete-para-bebes-fisher-price-perrito-3506713%2Fp&psig=AOvVaw1lEL4AeB0W4FBgLnITS3se&ust=1731050643451000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiV5KfYyYkDFQAAAAAdAAAAABAE",
+        foto: "/public/Images/exampleImages.webp",
         nombre: "Producto 1",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -36,7 +36,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arteli.com.mx%2Fjuguete-para-bebes-fisher-price-perrito-3506713%2Fp&psig=AOvVaw1lEL4AeB0W4FBgLnITS3se&ust=1731050643451000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiV5KfYyYkDFQAAAAAdAAAAABAE",
+        foto: "/public/Images/exampleImages.webp",
         nombre: "Producto 1",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
