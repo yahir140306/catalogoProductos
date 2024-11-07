@@ -1,0 +1,40 @@
+---
+import { PRODUCTOS } from "./Productos";
+---
+
+<h1 class="text-3xl font-semibold text-purple-400 text-center m-4">Catalogo de Productos.</h1>
+<section>
+  {
+    PRODUCTOS.map(
+      ({
+        foto,
+        nombre,
+        descripcion,
+        caracteristicas,
+        dimensiones,
+        material,
+        instrucciones,
+        precauciones,
+        precio,
+        descuento,
+      }) => (
+        <article class="bg-gray-100 m-2 grid grid-cols-4 sm:grid-cols-2">
+          <img
+            src={foto}
+            alt={descripcion}
+            class="w-full h-64 object-cover rounded-md"
+          />
+          <h2 class="text-xl font-semibold text-purple-400">{nombre}</h2>
+          <p class="text-lg font-semibold text-gray-600">{descripcion}</p>
+          <p class="text-lg font-semibold text-gray-600">{caracteristicas}</p>
+          <p class="text-lg font-semibold text-gray-600">{dimensiones}</p>
+          <p class="text-lg font-semibold text-gray-600">{material}</p>
+          <p class="text-lg font-semibold text-gray-600">{instrucciones}</p>
+          <p class="text-lg font-semibold text-gray-600">{precauciones}</p>
+          <p class="text-lg font-semibold text-gray-600">${precio}</p>
+          <p class="text-lg font-semibold text-gray-600">${descuento}</p>
+        </article>
+      )
+    )
+  }
+</section>
