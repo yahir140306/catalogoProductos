@@ -1,6 +1,6 @@
 export const PRODUCTOS = [
     {
-        foto: "/public/Images/exampleImages.webp",
+        foto: "/Images/exampleImages.webp",
         nombre: "Producto 1 - Nombre",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -12,7 +12,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "/public/Images/exampleImages.webp",
+        foto: "/Images/exampleImages.webp",
         nombre: "Producto 1  - Nombre",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -24,7 +24,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "/public/Images/exampleImages.webp",
+        foto: "/Images/exampleImages.webp",
         nombre: "Producto 1",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
@@ -36,7 +36,7 @@ export const PRODUCTOS = [
         descuento: 10
     },
     {
-        foto: "/public/Images/exampleImages.webp",
+        foto: "/Images/exampleImages.webp",
         nombre: "Producto 1",
         descripcion: "Producto 1",
         caracteristicas: "Caracteristicas del producto 1",
