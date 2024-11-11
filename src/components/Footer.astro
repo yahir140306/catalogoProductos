@@ -1,3 +1,18 @@
-<footer class="opacity-80 min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center rounded-md bg-violet-500/70">
-    <p class="font-semibold text-lg text-slate-100">Mercadotecnia - Nose</pc>
+---
+// import Social from "./Social.astro";
+
+import Social from '../components/Social.astro';
+---
+
+<footer class="w-full p-4 text-center mx-auto bg-purple-800/70">
+    <p class="font-semibold text-lg text-slate-100">Mercadotecnia - Integrantes:</p>
+    <ul>
+        <Social />
+    </ul>
+    <ul class="grid grid-cols-2 text-slate-100/70 font-semibold">
+        <li>Fulano 1</li>
+        <li>Fulano 2</li>
+        <li>Fulano 3</li>
+        <li>Fulano 4</li>
+    </ul>
 </footer>
