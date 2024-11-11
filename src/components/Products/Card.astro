@@ -1,11 +1,12 @@
 ---
 import { PRODUCTOS } from "./Productos";
+import "./Productos";
 ---
 
-<h1 class="text-3xl font-semibold text-purple-400 text-center m-4">
+<!-- <h1 class="text-3xl font-semibold bg-purple-800/70 text-center rounded p-4">
   Catalogo de Productos.
-</h1>
-<section class="grid grid-cols-2 sm:grid-cols-4">
+</h1> -->
+<section class="ml-6 mr-6 grid grid-cols-2 md:grid-cols-3 ">
   {
     PRODUCTOS.map(
       ({
@@ -22,16 +23,18 @@ import { PRODUCTOS } from "./Productos";
       }) => (
         <article class="bg-gray-100 m-2 border-fuchsia-950 border rounded-md p-4">
           <section>
-            <img src={foto} alt={descripcion} class="object-cover rounded-md" />
-            <h2 class="text-xl font-semibold text-purple-400 p-2">{nombre}</h2>
-            <section class="font-semibold text-gray-600">
-              <p>{descripcion}</p>
-              <p>{caracteristicas}</p>
-              <p>{dimensiones}</p>
-              <p>{material}</p>
-              <p>{instrucciones}</p>
-              <p>{precauciones}</p>
-              <p class="text-2xl">${precio} -  Ahora: ${descuento}</p>
+            <img src={foto} alt={descripcion} class="object-cover rounded-md w-1/2 m-auto" />
+            <h2 class="text-2xl text-center font-semibold text-purple-400">{nombre}</h2>
+            <section class="text-gray-600 m-1 text-xs">
+              <ul>
+                <li>- {descripcion}</li>
+                <li>- {caracteristicas}</li>
+                <li>- {dimensiones}</li>
+                <li>- {material}</li>
+                <li>- {instrucciones}</li>
+                <li>- {precauciones}</li>
+                <li>- ${precio} - {descuento}</li>
+              </ul>
             </section>
           </section>
         </article>
