@@ -2,11 +2,7 @@
 import { PRODUCTOS } from "./Productos";
 import "./Productos";
 ---
-
-<!-- <h1 class="text-3xl font-semibold bg-purple-800/70 text-center rounded p-4">
-  Catalogo de Productos.
-</h1> -->
-<section class="ml-6 mr-6 block md:grid-cols-3 ">
+<section class="ml-6 mr-6 block md:grid grid-cols-3 ">
   {
     PRODUCTOS.map(
       ({
@@ -21,12 +17,14 @@ import "./Productos";
         precio,
         descuento,
       }) => (
-        <article class="bg-gray-100 m-2 border-fuchsia-950 border rounded-md p-4">
+        <article class="bg-gray-200 m-2 flex items-center border rounded-md p-2 text-wrap md:block">
           <section>
-            <img src={foto} alt={descripcion} class="object-cover rounded-md w-1/3 m-auto" />
+            <img src={foto} alt={descripcion} class="object-cover rounded-md m-auto w-1/2 md:w-1/3 " />
+          </section>
+          <section class="text-gray-600 m-1 text-xs ">
             <h2 class="text-xl text-center font-bold text-purple-400">{nombre}</h2>
-            <section class="text-gray-600 m-1 text-xs ">
-              <ul>
+              <div>
+                <ul>
                 <li>- {descripcion}</li>
                 <li>- {caracteristicas}</li>
                 <li>- {dimensiones}</li>
@@ -35,8 +33,8 @@ import "./Productos";
                 <li>- {precauciones}</li>
                 <li>- ${precio} - {descuento}</li>
               </ul>
+              </div>
             </section>
-          </section>
         </article>
       )
     )
