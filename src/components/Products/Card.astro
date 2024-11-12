@@ -1,9 +1,9 @@
 ---
 import { PRODUCTOS } from "./Productos";
 import "./Productos";
-
 ---
-<section class="ml-6 mr-6 block md:grid grid-cols-3 ">
+
+<section class="ml-6 mr-6 block md:grid grid-cols-3">
   {
     PRODUCTOS.map(
       ({
@@ -21,47 +21,62 @@ import "./Productos";
         <article class="bg-gray-200 m-2 flex items-center border rounded-md p-2 text-wrap md:block">
           <section>
             <dialog class="p-4">
-              <img src={foto} alt={descripcion} class="object-cover rounded-md m-auto w-11/12" />
-              <button autofocus class="p-3 bg-purple-600/80 rounded-md m-2 text-slate-100">Cerrar</button>
+              <img
+                src={foto}
+                alt={descripcion}
+                class="object-cover rounded-md m-auto w-11/12"
+              />
+              <button
+                autofocus
+                class="p-3 bg-purple-600/80 rounded-md m-2 text-slate-100"
+              >
+                Cerrar
+              </button>
             </dialog>
             <button>
-              <img src={foto} alt={descripcion} class="object-cover rounded-md m-auto w-1/2 md:w-1/3 " />
+              <img
+                src={foto}
+                alt={descripcion}
+                class="object-cover rounded-md m-auto w-1/2 md:w-1/3 "
+              />
             </button>
           </section>
           <section class="text-gray-600 m-1 text-xs ">
-            <h2 class="text-xl text-center font-bold text-purple-400">{nombre}</h2>
-              <div>
-                <ul>
+            <h2 class="text-xl text-center font-bold text-purple-400">
+              {nombre}
+            </h2>
+            <div>
+              <ul>
                 <li>- {descripcion}</li>
                 <li>- {caracteristicas}</li>
                 <li>- {dimensiones}</li>
                 <li>- {material}</li>
                 <li>- {instrucciones}</li>
                 <li>- {precauciones}</li>
-                <li>- ${precio} - {descuento}</li>
+                <li>
+                  - ${precio} - {descuento}
+                </li>
               </ul>
-              </div>
-            </section>
+            </div>
+          </section>
         </article>
       )
     )
   }
 </section>
 
-<script>
-  
+<!-- <script>
+  const dialog = document.querySelector("dialog");
+  const showButton = document.querySelector("dialog + button");
+  const closeButton = document.querySelector("dialog button");
 
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+  // "Show the dialog" button opens the dialog modally
+  showButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
 
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-</script>
+  // "Close" button closes the dialog
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+</script> -->

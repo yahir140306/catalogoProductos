@@ -1,0 +1,55 @@
+---
+import { PRODUCTOS } from "./Productos";
+---
+
+<section class="ml-6 mr-6 block md:grid grid-cols-3">
+  {PRODUCTOS.map((producto, index) => (
+    <article
+      class="bg-gray-200 m-2 flex items-center border rounded-md p-2 text-wrap md:block"
+    
+    >
+      <section>
+        <!-- Diálogo modal único por producto -->
+        <dialog id={`dialog-${index}`} class="p-4">
+          <img
+            src={producto.foto}
+            alt={producto.descripcion}
+            class="object-cover rounded-md m-auto w-11/12"
+          />
+          <button
+            class="p-3 bg-purple-600/80 rounded-md m-2 text-slate-100"
+            onclick={`document.getElementById('dialog-${index}').close()`}
+          >
+            Cerrar
+          </button>
+        </dialog>
+        <!-- Botón para abrir el diálogo -->
+        <button onclick={`document.getElementById('dialog-${index}').showModal()`}>
+          <img
+            src={producto.foto}
+            alt={producto.descripcion}
+            class="object-cover rounded-md m-auto w-1/2 md:w-1/3"
+          />
+        </button>
+      </section>
+      <section class="text-gray-600 m-1 text-xs ">
+        <h2 class="text-xl text-center font-bold text-purple-400">
+          {producto.nombre}
+        </h2>
+        <div>
+          <ul>
+            <li>- {producto.descripcion}</li>
+            <li>- {producto.caracteristicas}</li>
+            <li>- {producto.dimensiones}</li>
+            <li>- {producto.material}</li>
+            <li>- {producto.instrucciones}</li>
+            <li>- {producto.precauciones}</li>
+            <li>
+              - ${producto.precio} - {producto.descuento}
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  ))}
+</section>
