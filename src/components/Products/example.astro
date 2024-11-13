@@ -5,7 +5,7 @@ import { PRODUCTOS } from "./Productos";
 <section class="ml-6 mr-6 block md:grid grid-cols-3">
   {PRODUCTOS.map((producto, index) => (
     <article
-      class="bg-gray-200 m-2 flex items-center border rounded-md p-2 text-wrap md:block"
+      class="bg-gray-200 m-2 items-center border-2 rounded-lg border-s-yellow-500 border-e-red-600 border-t-green-600 border-b-orange-500 p-2 text-wrap md:block"
     
     >
       <section>
@@ -13,11 +13,11 @@ import { PRODUCTOS } from "./Productos";
         <dialog id={`dialog-${index}`} class="p-4">
           <img
             src={producto.foto}
-            alt={producto.descripcion}
+              alt={producto.descripcion}
             class="object-cover rounded-md m-auto w-11/12"
           />
           <button
-            class="p-3 bg-purple-600/80 rounded-md m-2 text-slate-100"
+            class="p-3 bg-green-600/80 rounded-md m-2 text-slate-100"
             onclick={`document.getElementById('dialog-${index}').close()`}
           >
             Cerrar
@@ -32,11 +32,11 @@ import { PRODUCTOS } from "./Productos";
           />
         </button>
       </section>
-      <section class="text-gray-600 m-1 text-xs ">
-        <h2 class="text-xl text-center font-bold text-purple-400">
+      <section>
+        <h2 class="text-xl text-center font-bold text-red-600/90">
           {producto.nombre}
         </h2>
-        <div>
+        <div class="text-gray-600 m-1 text-xs text-wrap">
           <ul>
             <li>- {producto.descripcion}</li>
             <li>- {producto.caracteristicas}</li>
