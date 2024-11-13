@@ -8,5 +8,5 @@ interface Producto {
     instrucciones: string;
     precauciones: string;
     precio: number;
-    descuento?: number;
+    descuento?: string;
 }

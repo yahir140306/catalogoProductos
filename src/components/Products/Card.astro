@@ -1,82 +1,77 @@
 ---
 import { PRODUCTOS } from "./Productos";
-import "./Productos";
 ---
 
 <section class="ml-6 mr-6 block md:grid grid-cols-3">
   {
-    PRODUCTOS.map(
-      ({
-        foto,
-        nombre,
-        descripcion,
-        caracteristicas,
-        dimensiones,
-        material,
-        instrucciones,
-        precauciones,
-        precio,
-        descuento,
-      }) => (
-        <article class="bg-gray-200 m-2 flex items-center border rounded-md p-2 text-wrap md:block">
-          <section>
-            <dialog class="p-4">
-              <img
-                src={foto}
-                alt={descripcion}
-                class="object-cover rounded-md m-auto w-11/12"
-              />
-              <button
-                autofocus
-                class="p-3 bg-green-600/80 rounded-md m-2 text-slate-100"
-              >
-                Cerrar
-              </button>
-            </dialog>
-            <button>
-              <img
-                src={foto}
-                alt={descripcion}
-                class="object-cover rounded-md m-auto w-1/2 md:w-1/3 "
-              />
+    PRODUCTOS.map((producto, index) => (
+      <article
+        class=" card m-4 items-center border-2 rounded-lg border-s-yellow-500 border-e-red-600
+       border-t-green-600 border-b-orange-500 p-2 text-wrap md:block shadow-xl shadow-orange-300"
+      >
+        <section>
+          <dialog id={`dialog-${index}`} class="p-4">
+            <img
+              src={producto.foto}
+              alt={producto.descripcion}
+              class="object-cover rounded-md m-auto w-11/12"
+            />
+            <button
+              class="p-3 bg-green-600/80 rounded-md m-2 text-slate-100"
+              onclick={`document.getElementById('dialog-${index}').close()`}
+            >
+              Cerrar
             </button>
-          </section>
-          <section>
-            <h2 class="text-xl text-center font-bold text-red-700">
-              {nombre}
-            </h2>
-            <div class="text-gray-600 m-1 text-xs">
-              <ul>
-                <li>- {descripcion}</li>
-                <li>- {caracteristicas}</li>
-                <li>- {dimensiones}</li>
-                <li>- {material}</li>
-                <li>- {instrucciones}</li>
-                <li>- {precauciones}</li>
-                <li>
-                  - ${precio} - {descuento}
+          </dialog>
+          <button
+            onclick={`document.getElementById('dialog-${index}').showModal()`}
+          >
+            <img
+              src={producto.foto}
+              alt={producto.descripcion}
+              class="object-cover rounded-md m-auto w-1/2"
+            />
+          </button>
+        </section>
+
+        <section>
+          <h2 class="text-xl text-center font-bold text-red-600/90">
+            {producto.nombre}
+          </h2>
+          <div class="text-gray-600 m-1 text-xs text-wrap">
+            <ul>
+              <li>- {producto.descripcion}</li>
+              <li>- {producto.caracteristicas}</li>
+              <li>- {producto.dimensiones}</li>
+              <li>- {producto.material}</li>
+              <li>- {producto.instrucciones}</li>
+              <li>- {producto.precauciones}</li>
+              <li>
+                - <strong>${producto.precio}</strong>
+              </li>
+              {producto.descuento && (
+                <li id="descuento">
+                  <p class="text-base font-bold ">{producto.descuento}</p>
+                  <strong>Descuento</strong>
                 </li>
-              </ul>
-            </div>
-          </section>
-        </article>
-      )
-    )
+              )}
+            </ul>
+          </div>
+        </section>
+      </article>
+    ))
   }
 </section>
 
-<!-- <script>
-  const dialog = document.querySelector("dialog");
-  const showButton = document.querySelector("dialog + button");
-  const closeButton = document.querySelector("dialog button");
-
-  // "Show the dialog" button opens the dialog modally
-  showButton.addEventListener("click", () => {
-    dialog.showModal();
-  });
-
-  // "Close" button closes the dialog
-  closeButton.addEventListener("click", () => {
-    dialog.close();
-  });
-</script> -->
+<style>
+  #descuento {
+    text-align: center;
+    background: rgba(22, 163, 74, 0.834);
+    margin: 5px;
+    width: 30%;
+    padding: 6px;
+    color: white;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    list-style: none;
+  }
+</style>
